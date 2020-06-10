@@ -1,58 +1,29 @@
-// Array generic
-const numbers: number[] = [];
-const arr: Array<number> = [];
-
-// Generic types
-const getNumber = (x: number) => x;
-const getText = (x: string) => x;
-const getArray = (x: Array<any>) => x;
-// const value = getText('5'); /*?*/
-
-type TypeFactory<T> = T;
-type textType = TypeFactory<string>; /*?*/
-
-const text: textType = 'Message';
-
-// Generic functions
-function getValue<T>(value: T): T {
-  return value;
+interface Length {
+  length: number
 }
 
-const username = 'Adam';
-getValue(username);
-getValue(5);
-
-// Generic interfaces
-interface Values<V, W> {
-  val1: V,
-  val2: W
+interface Filterable {
+  filter: Function
 }
 
-function getValues<T, U>(arg1: T, arg2: U): Values<T, U> {
-  return {
-    val1: arg1,
-    val2: arg2
-  };
+function howLong<T extends Length & Filterable>(data: T): number {
+  return data.length;
 }
 
-const values = getValues(2, 'text');
+howLong([1, 2, 3]) /*?*/
+howLong("Abc") /*?*/
 
-// Generic classes 
-class List<T> {
-  private list: T[] = [];
 
-  addItem(item: T): void {
-    this.list.push(item);
-  }
-
-  getList(): T[] {
-    return this.list
-  }
+class Song {
+  constructor(public title: string, public year: number) {}
 }
 
-const list = new List<string>();
-const ids = new List<number>();
+function getInfo<T extends Song>(song: T): string {
+  return `${song.title} @ ${song.year}`;
+}
 
-list.addItem('Test');
-ids.addItem(1234);
-list.getList(); /*?*/
+const song = new Song("We Will Rock You", 1977);
+getInfo(song) /*?*/
+
+const movie = { title: 'Gone In 60 Seconds', year: 2000 }
+getInfo(movie) /*?*/
