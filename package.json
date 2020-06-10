@@ -1,5 +1,5 @@
 {
-  "name": "05_generic_types",
+  "name": "07_function_overload",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
