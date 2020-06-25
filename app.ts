@@ -1,13 +1,3 @@
-function upperAnything(data: string | string[]): string {
-  switch(typeof data) {
-    case "string": return data.toUpperCase();
-    default: return data.map(item => item.toUpperCase()).join('')
-  }
-}
-
-upperAnything(['a', 'b', 'c']); /*?*/
-upperAnything('abc'); /*?*/
-
 class Song {
   constructor(public title: string) {}
 }

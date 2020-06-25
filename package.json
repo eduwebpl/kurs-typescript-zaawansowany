@@ -1,5 +1,5 @@
 {
-  "name": "12_type_guards",
+  "name": "13_instance_of",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
