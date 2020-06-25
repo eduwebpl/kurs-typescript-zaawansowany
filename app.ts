@@ -1,21 +1,28 @@
-enum Availability {
-  Monday,
-  Tuesday,
-  Wednesday = '123'.length,
-  Thursday = 4,
-  Friday,
-}
-const key = 'Monday';
-Availability.Monday /*?*/
-Availability[key] /*?*/
-Availability[5] /*?*/
-
-enum SupportedFileTypes {
-  png = 'image/png',
-  jpg = 'image/jpeg',
+function upperAnything(data: string | string[]): string {
+  switch(typeof data) {
+    case "string": return data.toUpperCase();
+    default: return data.map(item => item.toUpperCase()).join('')
+  }
 }
 
-SupportedFileTypes.png /*?*/
+upperAnything(['a', 'b', 'c']); /*?*/
+upperAnything('abc'); /*?*/
 
-function foo(bar: SupportedFileTypes) {}
-foo(SupportedFileTypes.png)
+class Song {
+  constructor(public title: string) {}
+}
+
+class Playlist {
+  constructor(public name: string) {}
+}
+
+function play(media: Song | Playlist) {
+  if ('title' in media) {
+    return 'Play song!'
+  }
+
+  return 'Play playlist.'
+}
+
+const bestThemeEver = new Song('Game of Thrones Theme');
+play(bestThemeEver); /*?*/
