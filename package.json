@@ -26,6 +26,7 @@
     "lint:fix": "eslint './*.{ts,tsx}' --fix"
   },
   "dependencies": {
-    "axios": "^0.19.2"
+    "@types/ramda": "^0.27.6",
+    "ramda": "^0.27.0"
   }
 }

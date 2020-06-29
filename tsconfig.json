@@ -5,6 +5,11 @@
     "strict": true,
     "outDir": "./dist",
     "preserveConstEnums": true,
-    // "strictNullChecks": true
+    "lib": ["es5", "es6"],
+    "typeRoots": [
+      "node_modules/@types",
+      "@types",
+    ],
+    "declaration": true
   }
 }
