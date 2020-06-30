@@ -1,15 +1,12 @@
 {
+  "extends": "./tsconfig.main.json",
   "compilerOptions": {
-    "target": "ES2015",
-    "module": "commonjs",
-    "strict": true,
-    "outDir": "./dist",
-    "preserveConstEnums": true,
-    "lib": ["es5", "es6"],
-    "typeRoots": [
-      "node_modules/@types",
-      "@types",
-    ],
-    "declaration": true
-  }
+    "target": "ESNext",
+		"module": "commonjs",
+		"lib": ["dom", "es6"],
+    "outDir": "dist",
+  },
+  "files": ["./app.ts"],
+  "include": [],
+  "exclude": []
 }
