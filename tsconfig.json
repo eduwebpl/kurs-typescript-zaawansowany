@@ -4,8 +4,5 @@
     "module": "commonjs",
     "lib": ["dom", "es6"],
     "outDir": "dist",
-  },
-  "files": ["./app.ts", "src/excluded/excluded.ts"],
-  "include": ["src/???luded/*.ts"],
-  "exclude": ["src/???luded/*.ts"],
+  }
 }
