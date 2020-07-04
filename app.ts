@@ -1,3 +1,1 @@
-async function foo() {
-  await console.log('test');
-}
+console.log('Main file');
