@@ -4,6 +4,11 @@
     "module": "commonjs",
     "outDir": "dist",
     "lib": ["ES6", "DOM"],
-    "strict": true
+    "strict": true,
+
+    "sourceMap": true,
+    "inlineSources": true,
+    // "inlineSourceMap": true
+    "mapRoot": "custom-maps-source",
   }
 }
