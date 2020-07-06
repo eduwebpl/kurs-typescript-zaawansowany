@@ -1,5 +1,5 @@
 {
-  "name": "22_interfaces",
+  "name": "20_source_maps",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -25,10 +25,5 @@
     "lint": "eslint './*.{ts,tsx}'",
     "lint:fix": "eslint './*.{ts,tsx}' --fix"
   },
-  "dependencies": {
-    "@types/jquery": "^3.5.0",
-    "@types/lodash": "^4.14.157",
-    "axios": "^0.19.2",
-    "lodash": "^4.17.15"
-  }
+  "dependencies": { }
 }
