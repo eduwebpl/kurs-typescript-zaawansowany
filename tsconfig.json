@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
     "outDir": "dist",
-    "lib": ["ES6", "DOM"],
-    "strict": true
+    "strict": true,
+    "listFiles": false,
+    "listEmittedFiles": false,
+    "diagnostics": false,
+    "traceResolution": false,
+    "pretty": false,
   }
 }
