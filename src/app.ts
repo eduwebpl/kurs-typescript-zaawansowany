@@ -1,8 +1,12 @@
-import express, { Request, Response } from 'express';
-const app = express();
+// Type inference
+const text = 'Adam';
+const func = (foo: string) => ({ foo });
 
-app.get('/', function (req: Request, res: Response) {
-  res.send(`Hi ${req.query.name} 👋`);
-});
+// Non-existing values
+interface Song {
+	title: string;
+}
+const getTitle = (song?: Song) => song.title;
 
-app.listen(3000);
+// Use prettier
+const abc = 'test';
