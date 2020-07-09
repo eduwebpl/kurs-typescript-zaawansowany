@@ -1,30 +1,31 @@
-let a: object // arrays and objects 
-let b: Object
-let c: {}
+let upperCase: Object
+let literal: {}
+let lowerCase: object
 
-typeof '' /*?*/
-// // b = '123'
-// // b = 1234
-// b = false
-// // b.
+upperCase = 123
+upperCase = '1234'
+upperCase = false
+upperCase = undefined
+upperCase = null
 
-// interface Foo { 
-//   foo: string
-// }
+const text = ''
 
-// const obj = { // : Foo | : Object
-//   foo: 'text' 
-// }
+lowerCase = 123
+lowerCase = '1234'
+lowerCase = false
+lowerCase = undefined
+lowerCase = null
+lowerCase = []
+lowerCase = {}
 
-// // obj.foo;
+Object.create({})
+Object.create(null)
+Object.create(undefined)
+Object.create(123)
+Object.create('123')
 
-// const bar: Object = {};
-// bar.
-
-// const textObj: Object = '';
-
-// Object.create({})
-// // Object.create(null);
-// // Object.create(undefined);
-// // Object.create(10);
-// // Object.create('');
+let strict: { [key: string]: string }
+strict = { foo: 'bar' }
+strict = []
+strict = true
+strict = null
